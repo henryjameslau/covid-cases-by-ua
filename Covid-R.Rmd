@@ -1,0 +1,20 @@
+---
+title: "Covid UK cases"
+output: html_notebook
+---
+
+```{r}
+library (readr)
+library (dplyr)
+library (tidyr)
+urlfile="https://raw.githubusercontent.com/tomwhite/covid-19-uk-data/master/data/covid-19-cases-uk.csv"
+
+cases<-read_csv(url(urlfile))
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Cmd+Option+I*.
+
+```{r}
+cases %>% group_by(Area)
+```
+
